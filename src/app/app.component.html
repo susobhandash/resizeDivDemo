@@ -1,0 +1,10 @@
+<div class="div-for-resize" #resizeContainer>
+  <div class="div1" #resizableDivs [style.width]="width1" [style.minWidth.px]="minWidth1">
+    Hi, how are you doing today
+  </div>
+  <div class="resize-handler" [style.left.px]="resizeLeft" draggable="true" (drag)="handlerDragged($event)" (dragend)="handlerDragged($event)"></div>
+  <div class="div2" #resizableDivs [style.width]="width2"  [style.minWidth.px]="minWidth2">
+    Hello, I am fine. How about you ?
+  </div>
+</div>
+<!-- <div class="helperDiv" [style.top.px]="top" [style.left.px]="left">Heahahahehahhahahahaa</div> -->

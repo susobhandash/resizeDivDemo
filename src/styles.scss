@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 10px;
+
+    .div-for-resize {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        position: relative;
+
+        > div:not(.resize-handler) {
+            display: block;
+        }
+
+        .div1 {
+            padding: 10px;
+            background: lightcyan;
+            width: 100px;
+        }
+        .div2 {
+            padding: 10px;
+            background: lightgreen;
+            // width: calc(100% - 100px);
+        }
+        .resize-handler {
+            width: 4px;
+            background: #333;
+            cursor: col-resize;
+            position: absolute;
+            height: 100%;
+        }
+    }
+
+    .helperDiv {
+        padding: 10px;
+        border: 1px solid red;
+        position: fixed;
+    }
+}
